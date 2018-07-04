@@ -35,6 +35,9 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.6'
+  gem 'guard', '~> 2.14.0'
+  gem 'guard-rspec', '~> 4.7.2' 
+  gem 'guard-cucumber', '~> 2.1.2'
  end
  
  group :test do
@@ -42,6 +45,7 @@ group :development, :test do
  end
 
 # Reduces boot times through caching; required in config/boot.rb
+
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap-sass', '~>3.3.6'
