@@ -18,6 +18,24 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def show
+    @article = Article.find(params[:id])
+  end
+
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update(article_params)
+       flash[:success]= "Article has been created"
+       redirect_to @article
+    else
+      flash.now[:danger] ="Could not update article"
+      render :edit
+  end
+
   private
   
   def article_params
